@@ -1,0 +1,632 @@
+{
+  "blog1": {
+    "north_star": "Monthly Revenue (AED)",
+    "oct_2026_revenue": 3039409,
+    "oct_2026_active": 6267,
+    "oct_2026_orders": 8194,
+    "oct_2026_aov": 370.9,
+    "avg_retention_2026": 0.4686,
+    "avg_retention_2024": 0.424,
+    "revenue_2025": 25333593,
+    "revenue_2026_ytd": 28766730
+  },
+  "blog2": {
+    "elbow_inertia": {
+      "Recency": [
+        1624691179.2,
+        328486529.0,
+        144077957.8,
+        77264932.2,
+        48242875.4,
+        33865198.6,
+        24932926.7,
+        19239911.3,
+        14856481.0
+      ],
+      "Frequency": [
+        1483742.7,
+        517425.2,
+        258247.1,
+        154525.7,
+        103788.9,
+        73502.3,
+        54833.3,
+        42573.2,
+        33482.8
+      ],
+      "Revenue": [
+        497341237698.8,
+        159421920874.3,
+        79340317857.8,
+        47883904699.6,
+        32197460597.1,
+        22189874834.6,
+        16665961349.5,
+        13012194984.0,
+        10093664086.2
+      ]
+    },
+    "chosen_k": 4,
+    "silhouette": {
+      "Recency": 0.708,
+      "Frequency": 0.613,
+      "Revenue": 0.669
+    },
+    "segments": [
+      {
+        "Segment": "High-Value",
+        "customers": 5815,
+        "avg_recency": 62.85,
+        "avg_frequency": 19.41,
+        "avg_revenue": 8495.6,
+        "total_revenue": 49401927.7,
+        "revenue_share": 0.71
+      },
+      {
+        "Segment": "Low-Value",
+        "customers": 5632,
+        "avg_recency": 586.34,
+        "avg_frequency": 3.46,
+        "avg_revenue": 855.96,
+        "total_revenue": 4820791.87,
+        "revenue_share": 0.07
+      },
+      {
+        "Segment": "Mid-Value",
+        "customers": 10325,
+        "avg_recency": 98.27,
+        "avg_frequency": 5.98,
+        "avg_revenue": 1517.44,
+        "total_revenue": 15667571.39,
+        "revenue_share": 0.22
+      }
+    ]
+  },
+  "blog3": {
+    "feature_window": "Feb-Apr 2026",
+    "target_window": "May-Oct 2026 (6 months)",
+    "customers": 10659,
+    "ltv_groups": [
+      {
+        "LTVCluster": 0,
+        "min": 0.0,
+        "max": 1306.3,
+        "mean": 460.7,
+        "count": 7433
+      },
+      {
+        "LTVCluster": 1,
+        "min": 1307.5,
+        "max": 3968.9,
+        "mean": 2157.3,
+        "count": 2459
+      },
+      {
+        "LTVCluster": 2,
+        "min": 3975.9,
+        "max": 16408.3,
+        "mean": 5794.7,
+        "count": 767
+      }
+    ],
+    "baseline_logreg": {
+      "accuracy": 0.7625,
+      "f1_macro": 0.5778,
+      "roc_auc_ovr": 0.8574
+    },
+    "xgb_default": {
+      "accuracy": 0.7426,
+      "f1_macro": 0.5525,
+      "roc_auc_ovr": 0.8487
+    },
+    "xgb_tuned": {
+      "accuracy": 0.7572,
+      "f1_macro": 0.5727,
+      "roc_auc_ovr": 0.8613
+    },
+    "best_params": {
+      "subsample": 0.7,
+      "reg_lambda": 0.5,
+      "n_estimators": 400,
+      "min_child_weight": 3,
+      "max_depth": 8,
+      "learning_rate": 0.12,
+      "gamma": 2,
+      "colsample_bytree": 1.0
+    },
+    "cv_best_f1_macro": 0.5719,
+    "report": {
+      "0": {
+        "precision": 0.8232514177693762,
+        "recall": 0.93756727664155,
+        "f1-score": 0.8766985405133367,
+        "support": 1858.0
+      },
+      "1": {
+        "precision": 0.49507389162561577,
+        "recall": 0.32682926829268294,
+        "f1-score": 0.39373163565132224,
+        "support": 615.0
+      },
+      "2": {
+        "precision": 0.5244755244755245,
+        "recall": 0.390625,
+        "f1-score": 0.44776119402985076,
+        "support": 192.0
+      },
+      "accuracy": 0.7572232645403377,
+      "macro avg": {
+        "precision": 0.6142669446235055,
+        "recall": 0.551673848311411,
+        "f1-score": 0.5727304567315032,
+        "support": 2665.0
+      },
+      "weighted avg": {
+        "precision": 0.7259928248647487,
+        "recall": 0.7572232645403377,
+        "f1-score": 0.7343418361925231,
+        "support": 2665.0
+      }
+    },
+    "top_features": {
+      "aov": 0.19580000638961792,
+      "monetary": 0.04010000079870224,
+      "F3": 0.037700001150369644,
+      "frequency": 0.03519999980926514,
+      "recency": 0.029100000858306885,
+      "orders_90d": 0.02889999933540821,
+      "country_UAE": 0.027499999850988388,
+      "tenure": 0.027400000020861626,
+      "n_categories": 0.02669999934732914,
+      "neg_reviews": 0.026399999856948853,
+      "cod_share": 0.026399999856948853,
+      "M3": 0.025800000876188278
+    }
+  },
+  "blog4": {
+    "snapshot": "1 May 2026",
+    "label": "no order in May-Oct 2026",
+    "customers": 14838,
+    "churn_rate": 0.2806,
+    "baseline_logreg": {
+      "accuracy": 0.8272,
+      "f1_macro": 0.7661,
+      "precision": 0.7591,
+      "recall": 0.5629,
+      "f1": 0.6464,
+      "roc_auc": 0.837
+    },
+    "xgb_default": {
+      "accuracy": 0.8105,
+      "f1_macro": 0.7463,
+      "precision": 0.7107,
+      "recall": 0.5476,
+      "f1": 0.6186,
+      "roc_auc": 0.8254
+    },
+    "xgb_tuned_0.5": {
+      "accuracy": 0.8267,
+      "f1_macro": 0.7617,
+      "precision": 0.7719,
+      "recall": 0.5427,
+      "f1": 0.6373,
+      "roc_auc": 0.8439
+    },
+    "xgb_tuned_best_threshold": {
+      "accuracy": 0.7833,
+      "f1_macro": 0.7472,
+      "precision": 0.5935,
+      "recall": 0.7224,
+      "f1": 0.6516,
+      "roc_auc": 0.8439
+    },
+    "threshold": 0.28,
+    "best_params": {
+      "subsample": 0.7,
+      "reg_lambda": 3,
+      "n_estimators": 150,
+      "min_child_weight": 5,
+      "max_depth": 5,
+      "learning_rate": 0.02,
+      "gamma": 1,
+      "colsample_bytree": 1.0
+    },
+    "cv_best_auc": 0.8469,
+    "top_features": {
+      "recency": 0.39149999618530273,
+      "app_user": 0.03460000082850456,
+      "late_rate": 0.033399999141693115,
+      "monetary": 0.03150000050663948,
+      "aov": 0.031300000846385956,
+      "orders_90d": 0.029899999499320984,
+      "frequency": 0.026799999177455902,
+      "return_rate": 0.025299999862909317,
+      "cod_share": 0.023399999365210533,
+      "tenure": 0.023399999365210533,
+      "channel_Google Search": 0.02199999988079071,
+      "avg_discount": 0.02199999988079071
+    },
+    "top_decile_churn_rate": 0.8868,
+    "decile_churn_rate": [
+      0.8868,
+      0.6469,
+      0.3477,
+      0.2776,
+      0.2183,
+      0.1348,
+      0.1213,
+      0.0809,
+      0.0566,
+      0.035
+    ]
+  },
+  "blog5": {
+    "snapshot": "1 Aug 2026",
+    "customers": 11812,
+    "class_share": {
+      "0": 0.4716,
+      "1": 0.2282,
+      "2": 0.3002
+    },
+    "model_comparison_cv_accuracy": {
+      "Logistic Regression": 0.5288,
+      "Naive Bayes": 0.5147,
+      "Random Forest": 0.5314,
+      "SVC": 0.5344,
+      "Decision Tree": 0.4345,
+      "KNN": 0.4628,
+      "XGBoost": 0.5051
+    },
+    "best_params": {
+      "learning_rate": 0.03,
+      "max_depth": 4,
+      "min_child_weight": 5,
+      "n_estimators": 200
+    },
+    "xgb_tuned_test": {
+      "accuracy": 0.5418,
+      "f1_macro": 0.4027,
+      "roc_auc_ovr": 0.6866
+    },
+    "majority_class_baseline": 0.4714
+  },
+  "blog6": {
+    "granularity": "weekly net revenue",
+    "weeks": 146,
+    "test_weeks": 16,
+    "search": [
+      {
+        "lags": 12,
+        "hidden": 32,
+        "layers": 1,
+        "dropout": 0.0,
+        "lr": 0.003,
+        "epochs": 150,
+        "val_rmse": 60524.75590120119
+      },
+      {
+        "lags": 12,
+        "hidden": 16,
+        "layers": 2,
+        "dropout": 0.0,
+        "lr": 0.003,
+        "epochs": 150,
+        "val_rmse": 62424.52805624708
+      },
+      {
+        "lags": 8,
+        "hidden": 32,
+        "layers": 1,
+        "dropout": 0.0,
+        "lr": 0.003,
+        "epochs": 150,
+        "val_rmse": 62625.73697114444
+      },
+      {
+        "lags": 12,
+        "hidden": 16,
+        "layers": 1,
+        "dropout": 0.2,
+        "lr": 0.003,
+        "epochs": 150,
+        "val_rmse": 62989.97593837025
+      },
+      {
+        "lags": 12,
+        "hidden": 64,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.003,
+        "epochs": 150,
+        "val_rmse": 63364.58654469677
+      },
+      {
+        "lags": 8,
+        "hidden": 64,
+        "layers": 1,
+        "dropout": 0.2,
+        "lr": 0.003,
+        "epochs": 150,
+        "val_rmse": 63487.08207848619
+      },
+      {
+        "lags": 8,
+        "hidden": 16,
+        "layers": 1,
+        "dropout": 0.2,
+        "lr": 0.003,
+        "epochs": 150,
+        "val_rmse": 63689.91525392481
+      },
+      {
+        "lags": 8,
+        "hidden": 16,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.01,
+        "epochs": 150,
+        "val_rmse": 64101.619275632045
+      }
+    ],
+    "best_config": {
+      "lags": 12,
+      "hidden": 32,
+      "layers": 1,
+      "dropout": 0.0,
+      "lr": 0.003,
+      "epochs": 150
+    },
+    "ensemble_seeds": 5,
+    "lstm": {
+      "rmse": 29229,
+      "mae": 25587,
+      "mape": 0.0396,
+      "accuracy_1_minus_mape": 0.9604
+    },
+    "naive_last_week": {
+      "rmse": 61989,
+      "mae": 42130,
+      "mape": 0.0637,
+      "accuracy_1_minus_mape": 0.9363
+    },
+    "last_year_plus_growth": {
+      "rmse": 54241,
+      "mae": 46535,
+      "mape": 0.072,
+      "accuracy_1_minus_mape": 0.928
+    },
+    "linear_regression": {
+      "rmse": 26529,
+      "mae": 20693,
+      "mape": 0.0342,
+      "accuracy_1_minus_mape": 0.9658
+    }
+  },
+  "blog7": {
+    "campaign": "Sep 2026, 3 random arms",
+    "customers": 17805,
+    "by_offer": {
+      "Free Delivery": {
+        "conversion_rate": 0.294,
+        "control_conversion": 0.1942,
+        "conversion_uplift_pp": 9.98,
+        "order_uplift": 589,
+        "revenue_uplift_aed": 213642,
+        "profit_per_customer": 42.72,
+        "control_profit_per_customer": 34.29,
+        "predicted_conversion_uplift_pp": 9.44
+      },
+      "20% Discount": {
+        "conversion_rate": 0.2761,
+        "control_conversion": 0.1942,
+        "conversion_uplift_pp": 8.2,
+        "order_uplift": 486,
+        "revenue_uplift_aed": 126636,
+        "profit_per_customer": 22.49,
+        "control_profit_per_customer": 34.29,
+        "predicted_conversion_uplift_pp": 6.31
+      }
+    },
+    "uplift_pp_by_segment": {
+      "Free Delivery": {
+        "High-Value": 13.12,
+        "Low-Value": 4.7,
+        "Mid-Value": 10.31
+      },
+      "20% Discount": {
+        "High-Value": 4.19,
+        "Low-Value": 8.67,
+        "Mid-Value": 10.38
+      }
+    },
+    "model": {
+      "test_auc": 0.7169,
+      "best_params": {
+        "subsample": 1.0,
+        "reg_lambda": 0.5,
+        "n_estimators": 600,
+        "min_child_weight": 10,
+        "max_depth": 3,
+        "learning_rate": 0.12,
+        "gamma": 1,
+        "colsample_bytree": 0.6
+      },
+      "cv_auc": 0.7194
+    }
+  },
+  "blog8": {
+    "20% Discount": {
+      "best_params": {
+        "subsample": 0.85,
+        "reg_lambda": 3,
+        "n_estimators": 250,
+        "min_child_weight": 3,
+        "max_depth": 3,
+        "learning_rate": 0.02,
+        "gamma": 1,
+        "colsample_bytree": 1.0
+      },
+      "cv_neg_logloss": -1.1894,
+      "actual_uplift_pp_by_decile": [
+        13.07,
+        15.99,
+        11.77,
+        15.79,
+        8.68,
+        13.96,
+        6.68,
+        12.83,
+        1.26,
+        -4.68
+      ],
+      "top3_deciles_uplift_pp": 13.61,
+      "bottom3_deciles_uplift_pp": 3.14,
+      "spearman_vs_true_uplift": 0.568
+    },
+    "Free Delivery": {
+      "best_params": {
+        "subsample": 0.85,
+        "reg_lambda": 3,
+        "n_estimators": 250,
+        "min_child_weight": 3,
+        "max_depth": 3,
+        "learning_rate": 0.02,
+        "gamma": 1,
+        "colsample_bytree": 1.0
+      },
+      "cv_neg_logloss": -1.1827,
+      "actual_uplift_pp_by_decile": [
+        21.91,
+        12.78,
+        9.47,
+        19.4,
+        10.5,
+        4.61,
+        9.89,
+        8.18,
+        -0.64,
+        -2.98
+      ],
+      "top3_deciles_uplift_pp": 14.72,
+      "bottom3_deciles_uplift_pp": 1.52,
+      "spearman_vs_true_uplift": 0.716
+    },
+    "true_segment_shares_discount": {
+      "persuadables (uplift>+5pp)": 0.8185,
+      "sleeping dogs (uplift<0)": 0.1372
+    },
+    "policy_mix": {
+      "Free Delivery": 0.7267,
+      "No Offer": 0.1612,
+      "20% Discount": 0.1121
+    }
+  },
+  "blog9": {
+    "design": "Holdout customers, stratified by RFM segment, 50/50 split, Welch t-test",
+    "n_A": 2670,
+    "n_B": 2672,
+    "stratification": {
+      "A: blanket 20% discount": {
+        "High-Value": 870,
+        "Low-Value": 456,
+        "Mid-Value": 1344
+      },
+      "B: uplift-targeted offers": {
+        "High-Value": 870,
+        "Low-Value": 457,
+        "Mid-Value": 1345
+      }
+    },
+    "profit_per_customer": {
+      "A_mean": 21.595,
+      "B_mean": 40.865,
+      "lift_pct": 0.8923,
+      "t_stat": 10.453,
+      "p_value": 2.96e-25
+    },
+    "revenue_per_customer": {
+      "A_mean": 69.105,
+      "B_mean": 101.143,
+      "lift_pct": 0.4636,
+      "t_stat": 6.749,
+      "p_value": 1.67e-11
+    },
+    "conversion": {
+      "A_mean": 0.273,
+      "B_mean": 0.29,
+      "lift_pct": 0.0651,
+      "t_stat": 1.443,
+      "p_value": 0.149
+    },
+    "discount_spend_per_customer": {
+      "A": 17.28,
+      "B": 4.92
+    }
+  },
+  "reviews": {
+    "n_reviews": 64101,
+    "blank_or_spam_share": 0.0386,
+    "sentiment_share": {
+      "pos": 0.5725,
+      "neu": 0.2492,
+      "neg": 0.1784
+    },
+    "best_params": {
+      "clf__C": "0.3",
+      "feats__c__ngram_range": "(3, 5)"
+    },
+    "model": {
+      "accuracy": 0.9729,
+      "f1_macro": 0.9685
+    },
+    "star_rating_rule_baseline": {
+      "accuracy": 0.8394,
+      "f1_macro": 0.7846
+    },
+    "top_complaints_share_of_negative": {
+      "late delivery": 0.2403,
+      "size": 0.1333,
+      "quality": 0.3617,
+      "refund/returns": 0.2089,
+      "service": 0.2241
+    }
+  },
+  "value_risk_matrix": {
+    "Low": {
+      "High value": 833,
+      "Low value": 8704,
+      "Mid value": 2299
+    },
+    "Medium": {
+      "High value": 337,
+      "Low value": 648,
+      "Mid value": 1232
+    },
+    "High": {
+      "High value": 424,
+      "Low value": 1418,
+      "Mid value": 1123
+    }
+  },
+  "improvement": {
+    "P1_churn": {
+      "targeted_customers": 1547,
+      "assumed_save_rate": 0.2,
+      "revenue_protected_6m_aed": 212350,
+      "campaign_cost_aed": 38675,
+      "roi": 1.47,
+      "revenue_protected_pct_of_6m_revenue": 0.0122
+    },
+    "P2_promotions": {
+      "profit_per_customer_lift": 0.8923,
+      "discount_spend_change_pct": -0.7153
+    },
+    "P3_inventory": {
+      "forecast_error_old_mape": 0.072,
+      "forecast_error_new_mape": 0.0396,
+      "error_reduction_pct": 0.45,
+      "note": "stock-out + overstock units scale roughly with absolute forecast error"
+    }
+  },
+  "generated_at": "2026-11-15T16:28:03"
+}
